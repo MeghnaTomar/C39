@@ -1,6 +1,6 @@
 class Game {
   constructor(){
-
+  
   }
 
   getState(){
@@ -55,7 +55,7 @@ class Game {
       var index = 0;
 
       //x and y position of the cars
-      var x = 175 ;
+      var x = 250 ;
       var y;
 
       for(var plr in allPlayers){
@@ -70,7 +70,9 @@ class Game {
         cars[index-1].y = y;
 
         if (index === player.index){
-          cars[index - 1].shapeColor = "red";
+          stroke(10);
+          fill("red");
+          ellipse(x,y,60,60);
           camera.position.x = displayWidth/2;
           camera.position.y = cars[index-1].y;
         }
